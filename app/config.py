@@ -19,6 +19,8 @@ class Config:
     habilitar_cache: bool
     habilitar_watchdog: bool
     watchdog_delay_seconds: int
+    watchdog_stable_checks: int
+    watchdog_stable_interval_seconds: int
     max_workers: int
     modo_debug: bool
 
@@ -43,6 +45,8 @@ def carregar_config() -> Config:
         habilitar_cache=bool(dados.get("habilitar_cache", True)),
         habilitar_watchdog=bool(dados.get("watchdog_enabled", dados.get("habilitar_watchdog", False))),
         watchdog_delay_seconds=max(1, int(dados.get("watchdog_delay_seconds", 30))),
+        watchdog_stable_checks=max(1, int(dados.get("watchdog_stable_checks", 3))),
+        watchdog_stable_interval_seconds=max(1, int(dados.get("watchdog_stable_interval_seconds", 5))),
         max_workers=max(1, int(dados.get("max_workers", 4))),
         modo_debug=bool(dados.get("modo_debug", False)),
     )

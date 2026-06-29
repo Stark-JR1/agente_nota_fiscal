@@ -20,6 +20,7 @@ from ..renomeador import SUFIXOS, dados_nome_processo, nome_documento, nome_pdf_
 from ..unificador import ORDEM, unir_processo
 from ..utils import ensure_dir, sanitizar_nome_arquivo
 from ..validador import validar_processo
+from ..validators.processo_validator import aplicar_score_auditoria
 from .confianca_service import aplicar_scores
 from .controle_fiscal_service import atualizar_controle_fiscal
 from .execucao_service import registrar_execucao
@@ -66,6 +67,7 @@ def processar_pasta(config, dry_run: bool = False) -> ResultadoProcessamento:
                 logging.exception("Falha isolada ao gerar saida do processo %s: %s", processo.get("id"), exc)
                 processo["status"] = "PENDENTE_ERRO_ARQUIVO"
                 processo.setdefault("erros", []).append(f"Erro ao gerar arquivos do processo: {exc}")
+                aplicar_score_auditoria(processo)
                 progresso(f"  {processo['id']}: erro ao gerar saida. Lote continuara.")
                 tentar_processar_pendencia(processo, pastas)
     else:
@@ -196,6 +198,7 @@ def validar_processos_com_progresso(processos: list[dict], tolerancia: float) ->
     validados = []
     for processo in processos:
         validado = validar_processo(processo, tolerancia)
+        aplicar_score_auditoria(validado)
         erros = "; ".join(validado.get("erros", [])) or "sem divergencias"
         tipos = ", ".join(sorted({str(doc.get("tipo_documento")) for doc in validado.get("documentos", [])}))
         progresso(f"  {validado['id']}: {validado['status']} | {tipos} | {erros}")
@@ -298,16 +301,32 @@ def registrar_erro_arquivo(processo: dict, exc: FileNotFoundError) -> None:
     processo["status"] = "PENDENTE_ERRO_ARQUIVO"
     mensagem = str(exc)
     processo.setdefault("erros", []).append(mensagem)
+    aplicar_score_auditoria(processo)
+    docs = processo.get("documentos", [])
+    fornecedor = next((doc.get("fornecedor_nome") for doc in docs if doc.get("fornecedor_nome")), None)
+    nf = next((doc.get("numero_nf") for doc in docs if doc.get("numero_nf")), None)
+    pedido = next((doc.get("numero_pedido") for doc in docs if doc.get("numero_pedido")), None)
     logging.exception(
-        "Arquivo fisico ausente ao gerar processo %s | documentos=%s",
+        (
+            "Arquivo fisico nao encontrado ao gerar processo aprovado | processo=%s | "
+            "fornecedor=%s | nf=%s | pedido=%s | caminho_esperado=%s | documentos=%s"
+        ),
         processo.get("id"),
+        fornecedor,
+        nf,
+        pedido,
+        mensagem,
         [
             {
                 "caminho_original": doc.get("caminho_original"),
                 "arquivo_nome": doc.get("arquivo_nome"),
+                "arquivo_origem": doc.get("arquivo_origem"),
                 "nome_normalizado": doc.get("nome_normalizado"),
+                "fornecedor": doc.get("fornecedor_nome"),
+                "nf": doc.get("numero_nf"),
+                "pedido": doc.get("numero_pedido"),
             }
-            for doc in processo.get("documentos", [])
+            for doc in docs
         ],
     )
 

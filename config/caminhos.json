@@ -6,9 +6,11 @@
   "limite_texto_minimo_pdf_digital": 150,
   "tolerancia_valor": 0.10,
   "habilitar_cache": true,
-  "habilitar_watchdog": true,
-  "watchdog_enabled": true,
+  "habilitar_watchdog": false,
+  "watchdog_enabled": false,
   "watchdog_delay_seconds": 30,
+  "watchdog_stable_checks": 3,
+  "watchdog_stable_interval_seconds": 5,
   "max_workers": 4,
   "modo_debug": false
 }
