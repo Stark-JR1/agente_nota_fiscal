@@ -1,0 +1,11 @@
+pymupdf
+pypdf
+pytesseract
+pillow
+opencv-python
+numpy
+rapidfuzz
+pandas
+openpyxl
+flask
+pytest

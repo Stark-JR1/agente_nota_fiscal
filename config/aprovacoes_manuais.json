@@ -1,0 +1,273 @@
+{
+  "f790503361261a146447d95358a06fe534919916b589152e066ee68db2ee7ff1": {
+    "processo_id": "PROCESSO_001",
+    "aprovado_em": "2026-06-09T16:18:15",
+    "arquivo_unido": "C:\\Users\\paulo.junior\\SISTERMI LOCACAO DE MAQUINAS E EQUIPAMENTOS LTDA\\FILIAL MG - Adminsitrativo\\FINANCEIRO\\13 - PROCESSAMENTO FISCAL\\PROCESSOS\\2026\\06-JUNHO\\09-06-2026\\COMPLETOS\\FORTBRAS AUTOPECAS S.A. - NF 549301 - R$ 213,05 - PROCESSO COMPLETO.pdf",
+    "pendencias_ignoradas": [
+      "Numero do pedido anexado 16446 diverge do pedido referenciado na NF 16445."
+    ]
+  },
+  "4589823174f53278d75bf1483f30712a1ce49b8fb7702992ca0fe3aa354f2f78": {
+    "processo_id": "PROCESSO_003",
+    "aprovado_em": "2026-06-09T16:19:27",
+    "arquivo_unido": "C:\\Users\\paulo.junior\\SISTERMI LOCACAO DE MAQUINAS E EQUIPAMENTOS LTDA\\FILIAL MG - Adminsitrativo\\FINANCEIRO\\13 - PROCESSAMENTO FISCAL\\PROCESSOS\\2026\\06-JUNHO\\09-06-2026\\COMPLETOS\\NEWTON FIGUEIREDO LIMA - - NF 13061 - R$ 3.490,00 - PROCESSO COMPLETO.pdf",
+    "pendencias_ignoradas": [
+      "Valor dos produtos da NF 3490.00 diverge do pedido 3728.00."
+    ]
+  },
+  "08a535bd1e2d1d45778e5f130d9b2e4a7cc5b96d877673d20c17f164fa1f3714": {
+    "processo_id": "PROCESSO_006",
+    "aprovado_em": "2026-06-09T16:20:18",
+    "arquivo_unido": "C:\\Users\\paulo.junior\\SISTERMI LOCACAO DE MAQUINAS E EQUIPAMENTOS LTDA\\FILIAL MG - Adminsitrativo\\FINANCEIRO\\13 - PROCESSAMENTO FISCAL\\PROCESSOS\\2026\\06-JUNHO\\09-06-2026\\COMPLETOS\\ART COPIAS GRAFICA RAPID - NF 11184 - R$ 211,60 - PROCESSO COMPLETO (2).pdf",
+    "pendencias_ignoradas": [
+      "Numero do pedido anexado 16645 diverge do pedido referenciado na NF 15747."
+    ]
+  },
+  "7e93ab0da4faf798e38da6643b404ef734fd3f9b50d9c0ba9c65c91f011f7a4a": {
+    "processo_id": "PROCESSO_004",
+    "aprovado_em": "2026-06-09T16:24:55",
+    "arquivo_unido": "C:\\Users\\paulo.junior\\SISTERMI LOCACAO DE MAQUINAS E EQUIPAMENTOS LTDA\\FILIAL MG - Adminsitrativo\\FINANCEIRO\\13 - PROCESSAMENTO FISCAL\\PROCESSOS\\2026\\06-JUNHO\\09-06-2026\\COMPLETOS\\L A LOCACOES E MANUTENCO - NF 20260313503 - R$ 900,00 - PROCESSO COMPLETO.pdf",
+    "pendencias_ignoradas": [
+      "Numero do pedido anexado 16641 diverge do pedido referenciado na NF 14843."
+    ]
+  },
+  "1d7d17401101437f8fd49f47069ba56ab5b9839b524a510eb33842dea5ed966c": {
+    "processo_id": "PROCESSO_007",
+    "aprovado_em": "2026-06-10T13:40:13",
+    "arquivo_unido": "C:\\Users\\paulo.junior\\SISTERMI LOCACAO DE MAQUINAS E EQUIPAMENTOS LTDA\\FILIAL MG - Adminsitrativo\\FINANCEIRO\\13 - PROCESSAMENTO FISCAL\\PROCESSOS\\2026\\06-JUNHO\\10-06-2026\\COMPLETOS\\MATHEUS AUGUSTO APARECID - NF 86 - R$ 1.890,00 - PROCESSO COMPLETO.pdf",
+    "pendencias_ignoradas": [
+      "Valor NF 2982.26 diverge da soma dos boletos 2970."
+    ]
+  },
+  "48f9ce1ec7829b571b857631d145790cd917c3cc7fcdf767e72fb3b756e95476": {
+    "processo_id": "PROCESSO_012",
+    "aprovado_em": "2026-06-10T13:43:31",
+    "arquivo_unido": "C:\\Users\\paulo.junior\\SISTERMI LOCACAO DE MAQUINAS E EQUIPAMENTOS LTDA\\FILIAL MG - Adminsitrativo\\FINANCEIRO\\13 - PROCESSAMENTO FISCAL\\PROCESSOS\\2026\\06-JUNHO\\10-06-2026\\COMPLETOS\\OUROTUR ORGANIZAÇÃO LTDA - 5451 - R$ 892,50 - PROCESSO COMPLETO.pdf",
+    "pendencias_ignoradas": [
+      "Valor dos produtos da NF 650.00 diverge do pedido 14400.00."
+    ]
+  },
+  "5a2e1c103826247acc38a47546706e09af52cd8002167bf640e40db58594db0b": {
+    "processo_id": "PROCESSO_004",
+    "aprovado_em": "2026-06-10T13:43:49",
+    "arquivo_unido": "C:\\Users\\paulo.junior\\SISTERMI LOCACAO DE MAQUINAS E EQUIPAMENTOS LTDA\\FILIAL MG - Adminsitrativo\\FINANCEIRO\\13 - PROCESSAMENTO FISCAL\\PROCESSOS\\2026\\06-JUNHO\\10-06-2026\\COMPLETOS\\OUROTUR ORGANIZAÇÃO LTDA - 5451 - R$ 892,50 - PROCESSO COMPLETO.pdf",
+    "pendencias_ignoradas": [
+      "Valor dos produtos da NF 22.50 diverge do pedido 915.00.",
+      "Valor NF 22.50 diverge da soma dos boletos 892.5."
+    ]
+  },
+  "10915177ee56a52d5922759076160782426e014979d358309c0cfe67d91725f7": {
+    "processo_id": "PROCESSO_004",
+    "aprovado_em": "2026-06-10T15:49:54",
+    "arquivo_unido": "C:\\Users\\paulo.junior\\SISTERMI LOCACAO DE MAQUINAS E EQUIPAMENTOS LTDA\\FILIAL MG - Adminsitrativo\\FINANCEIRO\\13 - PROCESSAMENTO FISCAL\\PROCESSOS\\2026\\06-JUNHO\\10-06-2026\\COMPLETOS\\OUROTUR ORGANIZAÇÃO LTDA - 5451 - R$ 892,50 - PROCESSO COMPLETO.pdf",
+    "pendencias_ignoradas": [
+      "Valor das NFs 892.50 diverge do pedido 915.00."
+    ]
+  },
+  "aa4acf50dfdc545ae547960d8d9dbaef24493e7b8ac9c17b6c28ff28237e26b9": {
+    "processo_id": "PROCESSO_009",
+    "aprovado_em": "2026-06-10T15:50:16",
+    "arquivo_unido": "C:\\Users\\paulo.junior\\SISTERMI LOCACAO DE MAQUINAS E EQUIPAMENTOS LTDA\\FILIAL MG - Adminsitrativo\\FINANCEIRO\\13 - PROCESSAMENTO FISCAL\\PROCESSOS\\2026\\06-JUNHO\\10-06-2026\\COMPLETOS\\TRANSPORTE RIB - NF169 - R$ 3000,00 - PROCESSO COMPLETO.pdf",
+    "pendencias_ignoradas": [
+      "Boleto nao identificado."
+    ]
+  },
+  "4ca4aa82a488405973f0127b1548e1ba7c14091ec084a93323e0e0055fa166c6": {
+    "processo_id": "PROCESSO_008",
+    "aprovado_em": "2026-06-12T07:59:35",
+    "arquivo_unido": "C:\\Users\\paulo.junior\\SISTERMI LOCACAO DE MAQUINAS E EQUIPAMENTOS LTDA\\FILIAL MG - Adminsitrativo\\FINANCEIRO\\13 - PROCESSAMENTO FISCAL\\PROCESSOS\\2026\\06-JUNHO\\12-06-2026\\COMPLETOS\\MAC SERVICOS AUTOMOTIVOS - NF 50878 - R$ 370,00 - PROCESSO COMPLETO.pdf",
+    "pendencias_ignoradas": [
+      "Valor dos produtos da NF 1075.21 diverge do pedido 1312.69."
+    ]
+  },
+  "4515a1c6f7533824e950baf1cd480f11f0096e5cb05917374dde91f7f5dee76d": {
+    "processo_id": "PROCESSO_006",
+    "aprovado_em": "2026-06-12T08:53:28",
+    "arquivo_unido": "C:\\Users\\paulo.junior\\SISTERMI LOCACAO DE MAQUINAS E EQUIPAMENTOS LTDA\\FILIAL MG - Adminsitrativo\\FINANCEIRO\\13 - PROCESSAMENTO FISCAL\\PROCESSOS\\2026\\06-JUNHO\\12-06-2026\\COMPLETOS\\POLI FILTRO INDUSTRIA E - NF 91583 - R$ 1.052,00 - PROCESSO COMPLETO.pdf",
+    "pendencias_ignoradas": [
+      "Pedido(s) referenciado(s) na NF sem anexo correspondente: 16575. Pedido(s) anexado(s): 16515, 16651.",
+      "Pedido(s) anexado(s) nao referenciado(s) na NF: 16651. Pedido(s) referenciado(s): 16515, 16575.",
+      "Valor dos produtos da NF 1052.00 diverge do pedido 1292.00."
+    ]
+  },
+  "3b96789c5cbf111b2eb99404fb23ca9741ff48d217b606acd9fccbbc49b6da94": {
+    "processo_id": "PROCESSO_004",
+    "aprovado_em": "2026-06-15T13:14:59",
+    "arquivo_unido": "C:\\Users\\paulo.junior\\SISTERMI LOCACAO DE MAQUINAS E EQUIPAMENTOS LTDA\\FILIAL MG - Adminsitrativo\\FINANCEIRO\\13 - PROCESSAMENTO FISCAL\\PROCESSOS\\2026\\06-JUNHO\\15-06-2026\\COMPLETOS\\POSTO LONGANA LTDA - POS - NF 328185 - R$ 996,00 - PROCESSO COMPLETO.pdf",
+    "pendencias_ignoradas": [
+      "Valor dos produtos da NF 996.00 diverge do pedido 4014.00.",
+      "Valor NF 996.00 diverge da soma dos boletos 4014.12."
+    ]
+  },
+  "bc6018ab9ebff91640a36319dc3f1adf2198e29acd7d8bf3a65e8db5c456895d": {
+    "processo_id": "PROCESSO_005",
+    "aprovado_em": "2026-06-15T13:15:50",
+    "arquivo_unido": "C:\\Users\\paulo.junior\\SISTERMI LOCACAO DE MAQUINAS E EQUIPAMENTOS LTDA\\FILIAL MG - Adminsitrativo\\FINANCEIRO\\13 - PROCESSAMENTO FISCAL\\PROCESSOS\\2026\\06-JUNHO\\15-06-2026\\COMPLETOS\\POLI FILTRO INDUSTRIA E - NF 91870 - R$ 350,90 - PROCESSO COMPLETO.pdf",
+    "pendencias_ignoradas": [
+      "Valor dos produtos da NF 350.90 diverge do pedido 350.00.",
+      "Valor NF 350.90 diverge da soma dos boletos 350.00."
+    ]
+  },
+  "5e713f282129bbe454baeb02804bf3301f788d33756ba1d4e24179cb4dfc0444": {
+    "processo_id": "PROCESSO_008",
+    "aprovado_em": "2026-06-15T13:16:38",
+    "arquivo_unido": "C:\\Users\\paulo.junior\\SISTERMI LOCACAO DE MAQUINAS E EQUIPAMENTOS LTDA\\FILIAL MG - Adminsitrativo\\FINANCEIRO\\13 - PROCESSAMENTO FISCAL\\PROCESSOS\\2026\\06-JUNHO\\15-06-2026\\COMPLETOS\\SISTERMI - NF 30097 - R$ 0,00 - PROCESSO COMPLETO.pdf",
+    "pendencias_ignoradas": [
+      "Pedido de compra nao identificado.",
+      "Boleto nao identificado.",
+      "Valor da nota fiscal nao identificado."
+    ]
+  },
+  "3ac52b92ef356a6a7c394cc942cfb2dd926c51cf4626ed09f680cb31041b5d4a": {
+    "processo_id": "PROCESSO_010",
+    "aprovado_em": "2026-06-15T13:16:45",
+    "arquivo_unido": "C:\\Users\\paulo.junior\\SISTERMI LOCACAO DE MAQUINAS E EQUIPAMENTOS LTDA\\FILIAL MG - Adminsitrativo\\FINANCEIRO\\13 - PROCESSAMENTO FISCAL\\PROCESSOS\\2026\\06-JUNHO\\15-06-2026\\COMPLETOS\\WANDERLI MOREIRA ROBERTO - NF 203 - R$ 1.440,00 - PROCESSO COMPLETO.pdf",
+    "pendencias_ignoradas": [
+      "Boleto nao identificado."
+    ]
+  },
+  "3cb05ca34af2523e419399e4f89f12b490d5e20094505b7921a600a44e5cf4af": {
+    "processo_id": "PROCESSO_001",
+    "aprovado_em": "2026-06-16T14:13:47",
+    "arquivo_unido": "C:\\Users\\paulo.junior\\SISTERMI LOCACAO DE MAQUINAS E EQUIPAMENTOS LTDA\\FILIAL MG - Adminsitrativo\\FINANCEIRO\\13 - PROCESSAMENTO FISCAL\\PROCESSOS\\2026\\06-JUNHO\\16-06-2026\\COMPLETOS\\COMERCIAL RODRIGUES & GA - NF 1594 - R$ 96,00 - PROCESSO COMPLETO.pdf",
+    "pendencias_ignoradas": [
+      "CNPJ do fornecedor diverge entre documentos.",
+      "CNPJ do fornecedor no NF/recibo (17.383.153/0001-68) diverge do boleto (15.010.000/0096-00).",
+      "CNPJ do fornecedor no pedido de compra (17.383.153/0001-68) diverge do boleto (15.010.000/0096-00)."
+    ]
+  },
+  "bba6043ee1db802b4437d7967c0b38b27d0e05a016015a7b88757f99e75fbd1c": {
+    "processo_id": "PROCESSO_002",
+    "aprovado_em": "2026-06-16T14:14:09",
+    "arquivo_unido": "C:\\Users\\paulo.junior\\SISTERMI LOCACAO DE MAQUINAS E EQUIPAMENTOS LTDA\\FILIAL MG - Adminsitrativo\\FINANCEIRO\\13 - PROCESSAMENTO FISCAL\\PROCESSOS\\2026\\06-JUNHO\\16-06-2026\\COMPLETOS\\GOMES E ELIAS LTDA - CEN - NF SEM NF - R$ 1.168,70 - PROCESSO COMPLETO.pdf",
+    "pendencias_ignoradas": [
+      "Valor NF 1168.70 diverge da soma dos boletos 691.41."
+    ]
+  },
+  "25ec9f7b6503dd093fbfddcbdb1aea13b20783a8ce1b29e5701fa8c8e88ca9d6": {
+    "processo_id": "PROCESSO_003",
+    "aprovado_em": "2026-06-16T14:15:09",
+    "arquivo_unido": "C:\\Users\\paulo.junior\\SISTERMI LOCACAO DE MAQUINAS E EQUIPAMENTOS LTDA\\FILIAL MG - Adminsitrativo\\FINANCEIRO\\13 - PROCESSAMENTO FISCAL\\PROCESSOS\\2026\\06-JUNHO\\16-06-2026\\COMPLETOS\\MAC FREIOS PECAS E SERVI - NF 84455 - R$ 1.757,68 - PROCESSO COMPLETO.pdf",
+    "pendencias_ignoradas": [
+      "Valor dos produtos da NF 1757.68 diverge do pedido 1957.61."
+    ]
+  },
+  "2e85317231bd36d6190f5de5f0973ee7068b627a0cadc10ec73138fb0a76ef89": {
+    "processo_id": "PROCESSO_003",
+    "aprovado_em": "2026-06-18T10:13:23",
+    "arquivo_unido": "C:\\Users\\paulo.junior\\SISTERMI LOCACAO DE MAQUINAS E EQUIPAMENTOS LTDA\\FILIAL MG - Adminsitrativo\\FINANCEIRO\\13 - PROCESSAMENTO FISCAL\\PROCESSOS\\2026\\06-JUNHO\\18-06-2026\\COMPLETOS\\HUMANA DESENVOLVIMENTO P - NF 619 - R$ 17.968,00 - PROCESSO COMPLETO.pdf",
+    "pendencias_ignoradas": [
+      "Valor dos produtos da NF 17968.00 diverge do pedido 8984.00."
+    ]
+  },
+  "79960d705ce42a36db275259e06833fae35a12b881e9cc28f72300113d1ee82f": {
+    "processo_id": "PROCESSO_008",
+    "aprovado_em": "2026-06-18T10:14:02",
+    "arquivo_unido": "C:\\Users\\paulo.junior\\SISTERMI LOCACAO DE MAQUINAS E EQUIPAMENTOS LTDA\\FILIAL MG - Adminsitrativo\\FINANCEIRO\\13 - PROCESSAMENTO FISCAL\\PROCESSOS\\2026\\06-JUNHO\\18-06-2026\\COMPLETOS\\SOLUÇÃO TELECOM - NF 9127 - R$ 23.617,92 - PROCESSO COMPLETO.pdf",
+    "pendencias_ignoradas": [
+      "Pedido de compra nao identificado.",
+      "Boleto nao identificado."
+    ]
+  },
+  "f7d78919e0e1426645f79777069d98cae030a60be179118433920a8e04039d7e": {
+    "processo_id": "PROCESSO_011",
+    "aprovado_em": "2026-06-18T10:14:20",
+    "arquivo_unido": "C:\\Users\\paulo.junior\\SISTERMI LOCACAO DE MAQUINAS E EQUIPAMENTOS LTDA\\FILIAL MG - Adminsitrativo\\FINANCEIRO\\13 - PROCESSAMENTO FISCAL\\PROCESSOS\\2026\\06-JUNHO\\18-06-2026\\COMPLETOS\\XCMG BRASIL INDUSTRIA LT - NF 2449 - R$ 469,74 - PROCESSO COMPLETO.pdf",
+    "pendencias_ignoradas": [
+      "CNPJ do fornecedor diverge entre documentos.",
+      "CNPJ do fornecedor no pedido de compra (14.707.364/0005-44) diverge do boleto (27.535.996/0001-96)."
+    ]
+  },
+  "c258ad7f3089a1c3e9b90a0634f783654cb09e61630b1492de74a3ee2513bb13": {
+    "processo_id": "PROCESSO_001",
+    "aprovado_em": "2026-06-18T10:16:23",
+    "arquivo_unido": "C:\\Users\\paulo.junior\\SISTERMI LOCACAO DE MAQUINAS E EQUIPAMENTOS LTDA\\FILIAL MG - Adminsitrativo\\FINANCEIRO\\13 - PROCESSAMENTO FISCAL\\PROCESSOS\\2026\\06-JUNHO\\18-06-2026\\COMPLETOS\\BATERGE ELETRO BATERIAS - NF 63874 - R$ 1.755,60 - PROCESSO COMPLETO.pdf",
+    "pendencias_ignoradas": [
+      "Valor dos produtos da NF 1755.60 diverge do pedido 3511.20."
+    ]
+  },
+  "8e7351d8be044d77906af29c0ac08ca375ed67d38d9d52c53be7cf57dc41ce9b": {
+    "processo_id": "PROCESSO_005",
+    "aprovado_em": "2026-06-18T10:21:17",
+    "arquivo_unido": "C:\\Users\\paulo.junior\\SISTERMI LOCACAO DE MAQUINAS E EQUIPAMENTOS LTDA\\FILIAL MG - Adminsitrativo\\FINANCEIRO\\13 - PROCESSAMENTO FISCAL\\PROCESSOS\\2026\\06-JUNHO\\18-06-2026\\COMPLETOS\\LIEBHERR BRASIL LTDA - NF 603416 - R$ 1.683,97 - PROCESSO COMPLETO.pdf",
+    "pendencias_ignoradas": [
+      "Liebherr sem pedido de compra.",
+      "CNPJ da Sistermi nao localizado nos documentos principais."
+    ]
+  },
+  "95ad230c1062c09fef2130ba7e4d7100467eb9aac9cd9f613eb8248e08d875ce": {
+    "processo_id": "PROCESSO_006",
+    "aprovado_em": "2026-06-18T10:23:43",
+    "arquivo_unido": "C:\\Users\\paulo.junior\\SISTERMI LOCACAO DE MAQUINAS E EQUIPAMENTOS LTDA\\FILIAL MG - Adminsitrativo\\FINANCEIRO\\13 - PROCESSAMENTO FISCAL\\PROCESSOS\\2026\\06-JUNHO\\18-06-2026\\COMPLETOS\\LIEBHERR BRASIL LTDA - NF 603416 - R$ 1.683,97 - PROCESSO COMPLETO.pdf",
+    "pendencias_ignoradas": [
+      "Nota fiscal nao identificada.",
+      "Boleto nao identificado."
+    ]
+  },
+  "adc72124501c0cc9a4d82daf1bd687fe2c08712c1655c3641d316bb56bdad6c6": {
+    "processo_id": "PROCESSO_004",
+    "aprovado_em": "2026-06-22T13:39:10",
+    "arquivo_unido": "C:\\Users\\paulo.junior\\SISTERMI LOCACAO DE MAQUINAS E EQUIPAMENTOS LTDA\\FILIAL MG - Adminsitrativo\\FINANCEIRO\\13 - PROCESSAMENTO FISCAL\\PROCESSOS\\2026\\06-JUNHO\\22-06-2026\\COMPLETOS\\LA CARVALHO 2S SUPRIMENT - NF 19661 - R$ 720,36 - PROCESSO COMPLETO.pdf",
+    "pendencias_ignoradas": [
+      "Valor da nota fiscal nao identificado."
+    ]
+  },
+  "b475ab1f3aa1be1593b5e1a7cddafbd415100b9f51c61fe252ae3f8311e39657": {
+    "processo_id": "PROCESSO_006",
+    "aprovado_em": "2026-06-22T13:39:41",
+    "arquivo_unido": "C:\\Users\\paulo.junior\\SISTERMI LOCACAO DE MAQUINAS E EQUIPAMENTOS LTDA\\FILIAL MG - Adminsitrativo\\FINANCEIRO\\13 - PROCESSAMENTO FISCAL\\PROCESSOS\\2026\\06-JUNHO\\22-06-2026\\COMPLETOS\\EMPRESA DE TRANSPORTES M - NF 220638 - R$ 27,79 - PROCESSO COMPLETO.pdf",
+    "pendencias_ignoradas": [
+      "Valor NF 27.79 diverge da soma dos boletos 204.97."
+    ]
+  },
+  "734af07ce7cb94a5ac2856abb3eed0ba7e6674b8ace16c99d88d4d5495f8dc62": {
+    "processo_id": "PROCESSO_001",
+    "aprovado_em": "2026-06-23T14:04:21",
+    "arquivo_unido": "C:\\Users\\paulo.junior\\SISTERMI LOCACAO DE MAQUINAS E EQUIPAMENTOS LTDA\\FILIAL MG - Adminsitrativo\\FINANCEIRO\\13 - PROCESSAMENTO FISCAL\\PROCESSOS\\2026\\06-JUNHO\\23-06-2026\\COMPLETOS\\ARTHUSO CONTABILIDADE E - NF 3526 - R$ 1.622,05 - PROCESSO COMPLETO.pdf",
+    "pendencias_ignoradas": [
+      "Pedido de compra nao identificado."
+    ]
+  },
+  "8e13126fb198915ad0cb4294cb87f8d7b38d7ec3a1299e22ede437ad7bc94e7c": {
+    "processo_id": "PROCESSO_003",
+    "aprovado_em": "2026-06-24T14:05:55",
+    "arquivo_unido": "C:\\Users\\paulo.junior\\SISTERMI LOCACAO DE MAQUINAS E EQUIPAMENTOS LTDA\\FILIAL MG - Adminsitrativo\\FINANCEIRO\\13 - PROCESSAMENTO FISCAL\\PROCESSOS\\2026\\06-JUNHO\\24-06-2026\\COMPLETOS\\SHALLON VIDROS ESPECIAIS - NF 1735 - R$ 2.900,00 - PROCESSO COMPLETO.pdf",
+    "pendencias_ignoradas": [
+      "CNPJ do fornecedor diverge entre documentos.",
+      "CNPJ do fornecedor no NF/recibo (27.612.731/0001-44) diverge do boleto (27.535.996/0001-96).",
+      "Valor dos produtos da NF 2900.00 diverge do pedido 5800.00."
+    ]
+  },
+  "19f5668f961beb9d8400a6411b9c25411738759b44cbffecf86d75728b148a85": {
+    "processo_id": "PROCESSO_001",
+    "aprovado_em": "2026-06-24T14:06:25",
+    "arquivo_unido": "C:\\Users\\paulo.junior\\SISTERMI LOCACAO DE MAQUINAS E EQUIPAMENTOS LTDA\\FILIAL MG - Adminsitrativo\\FINANCEIRO\\13 - PROCESSAMENTO FISCAL\\PROCESSOS\\2026\\06-JUNHO\\24-06-2026\\COMPLETOS\\FORTBRAS AUTOPECAS S.A. - NF 551738 - R$ 503,50 - PROCESSO COMPLETO.pdf",
+    "pendencias_ignoradas": [
+      "Valor dos produtos da NF 503.50 diverge do pedido 774.00."
+    ]
+  },
+  "08d269a7acb6804a3b62ffb75b75e8d9436d0d7be62277baf29700239413f0ce": {
+    "processo_id": "PROCESSO_005",
+    "aprovado_em": "2026-06-26T13:37:41",
+    "arquivo_unido": "C:\\Users\\paulo.junior\\SISTERMI LOCACAO DE MAQUINAS E EQUIPAMENTOS LTDA\\FILIAL MG - Adminsitrativo\\FINANCEIRO\\13 - PROCESSAMENTO FISCAL\\PROCESSOS\\2026\\06-JUNHO\\26-06-2026\\COMPLETOS\\SOLUCAO TELECON LTDA - NF SEM NF - R$ 462,00 - PROCESSO COMPLETO.pdf",
+    "pendencias_ignoradas": [
+      "Nota fiscal nao identificada."
+    ]
+  },
+  "ebf01fe95e013de017c436d66f0b68865669bb56710cc69faaf2e11f0d9ed01e": {
+    "processo_id": "PROCESSO_004",
+    "aprovado_em": "2026-06-26T13:41:13",
+    "arquivo_unido": "C:\\Users\\paulo.junior\\SISTERMI LOCACAO DE MAQUINAS E EQUIPAMENTOS LTDA\\FILIAL MG - Adminsitrativo\\FINANCEIRO\\13 - PROCESSAMENTO FISCAL\\PROCESSOS\\2026\\06-JUNHO\\26-06-2026\\COMPLETOS\\MICHELE DE FREITAS AFONS - NF SEM NF - R$ 1.340,00 - PROCESSO COMPLETO.pdf",
+    "pendencias_ignoradas": [
+      "Boleto nao identificado."
+    ]
+  },
+  "76e3dd544dae3740f6e72b572ed0b3c34916e079ca1400a0c7a020d0088e7257": {
+    "processo_id": "PROCESSO_002",
+    "aprovado_em": "2026-06-26T13:42:26",
+    "arquivo_unido": "C:\\Users\\paulo.junior\\SISTERMI LOCACAO DE MAQUINAS E EQUIPAMENTOS LTDA\\FILIAL MG - Adminsitrativo\\FINANCEIRO\\13 - PROCESSAMENTO FISCAL\\PROCESSOS\\2026\\06-JUNHO\\26-06-2026\\COMPLETOS\\MAC FREIOS PECAS E SERVI - NF 84641 - R$ 1.348,76 - PROCESSO COMPLETO.pdf",
+    "pendencias_ignoradas": [
+      "Valor dos produtos da NF 1348.76 diverge do pedido 1354.79."
+    ]
+  }
+}

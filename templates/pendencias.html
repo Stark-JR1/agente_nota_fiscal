@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="panel">
+    <div class="section-title">
+        <h2>Dashboard de Pendencias</h2>
+        <span>Processos que pedem acao manual</span>
+    </div>
+    <div class="pending-kpis">
+        <article><span>Falta NF</span><strong>{{ processos_operacionais|selectattr('status', 'equalto', 'AGUARDANDO NF')|list|length }}</strong></article>
+        <article><span>Falta Pedido</span><strong>{{ processos_operacionais|selectattr('status', 'equalto', 'AGUARDANDO PEDIDO')|list|length }}</strong></article>
+        <article><span>Falta Boleto</span><strong>{{ processos_operacionais|selectattr('status', 'equalto', 'AGUARDANDO BOLETO')|list|length }}</strong></article>
+        <article><span>Divergencia Valor</span><strong>{{ processos_operacionais|selectattr('status', 'equalto', 'PENDENTE')|list|length }}</strong></article>
+        <article><span>OCR Baixa Confianca</span><strong>{{ processos_operacionais|selectattr('status', 'equalto', 'PROCESSANDO OCR')|list|length }}</strong></article>
+    </div>
+</section>
+
+<section class="panel">
+    <div class="section-title">
+        <h2>Processos Pendentes</h2>
+        <span>{{ processos_operacionais|length }} processos</span>
+    </div>
+    {% include "_processos_table.html" %}
+</section>
+{% endblock %}

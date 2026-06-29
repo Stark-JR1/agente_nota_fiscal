@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ arquivo.name }}</title>
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            background: #eef2f7;
+            color: #16345b;
+            font-family: Arial, sans-serif;
+        }
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            padding: 9px 14px;
+            border-bottom: 1px solid #cbd5e1;
+            background: rgba(255, 255, 255, .96);
+        }
+        header strong {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        header span { color: #64748b; font-size: 12px; white-space: nowrap; }
+        main { display: grid; gap: 14px; padding: 14px; }
+        figure { margin: 0 auto; width: min(100%, 1120px); }
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border: 1px solid #cbd5e1;
+            background: white;
+            box-shadow: 0 3px 12px rgba(15, 23, 42, .12);
+        }
+        figcaption {
+            margin: 5px 0 0;
+            color: #64748b;
+            font-size: 11px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <strong>{{ arquivo.name }}</strong>
+        <span>{{ paginas|length }} página{{ 's' if paginas|length != 1 else '' }}</span>
+    </header>
+    <main>
+        {% for pagina in paginas %}
+        <figure>
+            <img src="{{ pagina }}" alt="Página {{ loop.index }}" loading="{{ 'eager' if loop.first else 'lazy' }}">
+            <figcaption>Página {{ loop.index }} de {{ paginas|length }}</figcaption>
+        </figure>
+        {% endfor %}
+    </main>
+</body>
+</html>

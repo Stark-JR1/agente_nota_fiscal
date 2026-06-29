@@ -1,0 +1,41 @@
+<div class="table-wrap">
+    <table>
+        <thead>
+            <tr>
+                <th>Status</th>
+                <th>Fornecedor</th>
+                <th>NF</th>
+                <th>Pedido</th>
+                <th>Valor NF</th>
+                <th>Valor Boleto</th>
+                <th>Valor Pedido</th>
+                <th>Diferenca</th>
+                <th>Conf.</th>
+                <th>Data</th>
+                <th>Acao</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for linha in linhas %}
+            <tr>
+                <td><span class="badge {{ 'ok' if linha['Status'] == 'APROVADO' else 'bad' }}">{{ linha["Status"] or '-' }}</span></td>
+                <td class="supplier">{{ linha["Fornecedor"] or '-' }}</td>
+                <td>{{ linha["NF"] or '-' }}</td>
+                <td>{{ linha["Pedido(s)"] or '-' }}</td>
+                <td>{{ linha["Valor NF"] or '-' }}</td>
+                <td>{{ linha["Valor Boleto(s)"] or '-' }}</td>
+                <td>{{ linha["Valor Pedido(s)"] or '-' }}</td>
+                <td>{{ linha["_diferenca"] }}</td>
+                <td>
+                    <div class="confidence"><span style="width: {{ linha['_confianca_pct'] }}%"></span></div>
+                    <small>{{ linha["_confianca_pct"] }}%</small>
+                </td>
+                <td>{{ linha["Data Processamento"] or '-' }}</td>
+                <td><a class="link" href="{{ url_for('processos') }}#linha-{{ linha['_id'] }}">Ver</a></td>
+            </tr>
+            {% else %}
+            <tr><td colspan="11" class="empty">Nenhum relatorio encontrado ainda.</td></tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>

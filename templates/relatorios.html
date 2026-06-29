@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="panel">
+    <div class="section-title">
+        <h2>Relatorios</h2>
+        <span>{{ arquivos_relatorio|length }} arquivos</span>
+    </div>
+    <div class="report-list">
+        {% for arquivo in arquivos_relatorio %}
+        <div class="report-row">
+            <strong>{{ arquivo.name }}</strong>
+            <span>{{ arquivo|data_path }}</span>
+            <small>{{ arquivo }}</small>
+        </div>
+        {% else %}
+        <p class="empty slim">Nenhum relatorio gerado.</p>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

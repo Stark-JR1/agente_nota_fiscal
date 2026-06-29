@@ -1,0 +1,14 @@
+{
+  "base_processamento_fiscal": "C:/Users/paulo.junior/SISTERMI LOCACAO DE MAQUINAS E EQUIPAMENTOS LTDA/FILIAL MG - Adminsitrativo/FINANCEIRO/13 - PROCESSAMENTO FISCAL",
+  "usar_data_atual": true,
+  "data_manual": null,
+  "tesseract_path": "C:/Users/paulo.junior/AppData/Local/Programs/Tesseract-OCR/tesseract.exe",
+  "limite_texto_minimo_pdf_digital": 150,
+  "tolerancia_valor": 0.10,
+  "habilitar_cache": true,
+  "habilitar_watchdog": true,
+  "watchdog_enabled": true,
+  "watchdog_delay_seconds": 30,
+  "max_workers": 4,
+  "modo_debug": false
+}

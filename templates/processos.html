@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="panel">
+    <div class="section-title">
+        <h2>Processos</h2>
+        <span>{{ processos_operacionais|length }} processos no ultimo relatorio</span>
+    </div>
+    {% include "_processos_table.html" %}
+</section>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="panel">
+    <div class="section-title">
+        <h2>Logs Tecnicos</h2>
+        <span>{{ log_atual.name if log_atual else 'sem log' }}</span>
+    </div>
+    <div class="filters">
+        <label>Data<input type="date"></label>
+        <label>Fornecedor<input type="search" placeholder="Fornecedor"></label>
+        <label>Tipo<select><option>Todos</option><option>INFO</option><option>WARNING</option><option>ERROR</option></select></label>
+        <label>Processo<input type="search" placeholder="PROCESSO_001"></label>
+    </div>
+    <div class="log-list">
+        {% for item in logs %}
+        <div class="log-row">
+            <time>{{ item.hora }}</time>
+            <span class="log-level">{{ item.nivel }}</span>
+            <p>{{ item.mensagem }}</p>
+        </div>
+        {% else %}
+        <p class="empty slim">Nenhum log encontrado.</p>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

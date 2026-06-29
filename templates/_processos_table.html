@@ -1,0 +1,41 @@
+<div class="table-wrap">
+    <table class="process-table">
+        <thead>
+            <tr>
+                <th>Status</th>
+                <th>Fornecedor</th>
+                <th>NF / NFS-e</th>
+                <th>Pedido</th>
+                <th>Valor NF</th>
+                <th>Valor Boleto</th>
+                <th>Valor Pedido</th>
+                <th>Diferenca</th>
+                <th>Conf.</th>
+                <th>Data</th>
+                <th>Acoes</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for processo in processos_operacionais %}
+            <tr>
+                <td><span class="status-pill {{ processo.status|lower|replace(' ', '-') }}">{{ processo.status }}</span></td>
+                <td class="supplier">{{ processo.fornecedor }}</td>
+                <td>{{ processo.nf }}</td>
+                <td>{{ processo.pedido }}</td>
+                <td>{{ processo.valor_nf }}</td>
+                <td>{{ processo.valor_boleto }}</td>
+                <td>{{ processo.valor_pedido }}</td>
+                <td class="{{ 'money-ok' if processo.diferenca in ['R$ 0,00', 'R$ -0,00'] else '' }}">{{ processo.diferenca }}</td>
+                <td>
+                    <div class="confidence"><span style="width: {{ processo.conferencia }}%"></span></div>
+                    <small>{{ processo.conferencia }}%</small>
+                </td>
+                <td>{{ processo.data }}</td>
+                <td><a class="icon-action" href="/processo/{{ processo.id }}">ver</a></td>
+            </tr>
+            {% else %}
+            <tr><td colspan="11" class="empty">Nenhum processo encontrado no relatorio atual.</td></tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,84 @@
+# Python
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtualenv
+.venv/
+venv/
+ENV/
+env/
+
+# IDE
+.vscode/
+.idea/
+
+# Pytest
+.pytest_cache/
+.pytest_tmp/
+
+# Mypy
+.mypy_cache/
+
+# Ruff
+.ruff_cache/
+
+# Coverage
+.coverage
+htmlcov/
+
+# Logs
+logs/
+*.log
+*.tmp.log
+
+# Cache
+.cache/
+
+# SQLite temporario
+*.db-journal
+*.sqlite-journal
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# macOS
+.DS_Store
+
+# PDFs e artefatos gerados
+saida/
+exports/
+temp/
+tmp/
+
+# ZIPs
+*.zip
+
+# OCR temporario
+ocr_temp/
+cache/
+
+# Arquivos temporarios Flask
+instance/
+
+# Ambiente
+.env
+.env.*
+
+# Backup
+backup/
+backups/
+backup_refatoracao_v1/
+
+# Banco historico temporario
+HISTORICO_LEGADO/_DATABASE/BACKUP/
+
+# Arquivos Office temporarios
+~$*.xlsx
+~$*.xlsm
+~$*.docx
+
+# Artefatos locais historicos
+static.zip

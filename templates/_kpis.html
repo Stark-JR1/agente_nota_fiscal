@@ -1,0 +1,38 @@
+<section class="kpis">
+    <article class="kpi blue">
+        <i>AR</i>
+        <div><span>Processos do Dia</span>
+        <strong>{{ kpis.processos_dia }}</strong>
+        <small>{{ kpis.arquivos }} arquivos encontrados</small></div>
+    </article>
+    <article class="kpi success">
+        <i>OK</i>
+        <div><span>Processos Aprovados</span>
+        <strong>{{ kpis.aprovados }}</strong>
+        <small>{{ kpis.aprovados_pct }}% do total</small></div>
+    </article>
+    <article class="kpi warning">
+        <i>PD</i>
+        <div><span>Pendencias</span>
+        <strong>{{ kpis.pendencias }}</strong>
+        <small>{{ kpis.pendencias_pct }}% do total</small></div>
+    </article>
+    <article class="kpi danger">
+        <i>ER</i>
+        <div><span>Prontos para Assinatura</span>
+        <strong>{{ kpis.aguardando_assinatura }}</strong>
+        <small>Processos aprovados</small></div>
+    </article>
+    <article class="kpi">
+        <i>R$</i>
+        <div><span>Valor Total Conferido</span>
+        <strong>{{ kpis.valor_total }}</strong>
+        <small>Valor dos aprovados</small></div>
+    </article>
+    <article class="kpi purple">
+        <i>OC</i>
+        <div><span>Tempo de Processamento</span>
+        <strong>{{ ultima_execucao.duracao_formatada or '00:00' }}</strong>
+        <small>Ultima execucao</small></div>
+    </article>
+</section>

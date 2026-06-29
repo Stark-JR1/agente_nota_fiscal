@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="panel">
+    <div class="section-title">
+        <h2>Assinaturas</h2>
+        <span>{{ processos_assinatura|length }} prontos para envio</span>
+    </div>
+    <div class="table-wrap">
+        <table>
+            <thead>
+                <tr>
+                    <th>Fornecedor</th>
+                    <th>NF</th>
+                    <th>Valor</th>
+                    <th>Enviado</th>
+                    <th>Status ZapSign</th>
+                    <th>Responsavel</th>
+                    <th>Abrir</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for processo in processos_assinatura %}
+                <tr>
+                    <td class="supplier">{{ processo.fornecedor }}</td>
+                    <td>{{ processo.nf }}</td>
+                    <td>{{ processo.valor }}</td>
+                    <td>-</td>
+                    <td><span class="status-pill aprovado">PRONTO ZAPSIGN</span></td>
+                    <td>{{ processo.responsavel }}</td>
+                    <td><a class="btn compact" href="{{ url_for('detalhe_processo', processo_id=processo.id) }}">Abrir</a></td>
+                </tr>
+                {% else %}
+                <tr><td colspan="7" class="empty">Nenhum processo aprovado aguardando assinatura.</td></tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</section>
+{% endblock %}

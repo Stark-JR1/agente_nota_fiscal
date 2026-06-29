@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="grid two">
+    <div class="panel">
+        <div class="section-title">
+            <h2>Pastas do Dia</h2>
+            <span>{{ pastas.data.strftime('%d/%m/%Y') }}</span>
+        </div>
+        <dl class="config-list">
+            <dt>Entrada</dt><dd>{{ pastas.entrada }}</dd>
+            <dt>Processados</dt><dd>{{ pastas.processados }}</dd>
+            <dt>Completos</dt><dd>{{ pastas.completos }}</dd>
+            <dt>Pendencias do dia</dt><dd>{{ pastas.pendencias_dia }}</dd>
+            <dt>Pendencias geral</dt><dd>{{ pastas.pendencias_geral }}</dd>
+            <dt>Assinados</dt><dd>{{ pastas.assinados }}</dd>
+            <dt>Relatorios</dt><dd>{{ pastas.relatorios }}</dd>
+            <dt>Logs</dt><dd>{{ pastas.logs }}</dd>
+        </dl>
+    </div>
+    <div class="panel">
+        <div class="section-title">
+            <h2>Parametros</h2>
+            <span>config/caminhos.json</span>
+        </div>
+        <dl class="config-list">
+            <dt>Base processamento fiscal</dt><dd>{{ config.base_processamento_fiscal }}</dd>
+            <dt>Usar data atual</dt><dd>{{ 'Sim' if config.usar_data_atual else 'Nao' }}</dd>
+            <dt>Data manual</dt><dd>{{ config.data_manual or '-' }}</dd>
+            <dt>Tolerancia valor</dt><dd>{{ config.tolerancia_valor }}</dd>
+            <dt>Tesseract</dt><dd>{{ config.tesseract_path or '-' }}</dd>
+        </dl>
+    </div>
+</section>
+{% endblock %}

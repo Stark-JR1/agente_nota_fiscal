@@ -1,0 +1,118 @@
+{% extends "base.html" %}
+{% block content %}
+{% include "_kpis.html" %}
+
+<section class="dashboard-grid">
+    <div class="panel chart-card">
+        <div class="section-title">
+            <h2>Aprovados x Pendencias</h2>
+            <select class="mini-select"><option>Hoje</option></select>
+        </div>
+        <div class="donut" style="--ok-pct: {{ graficos.status.aprovados_pct }}%;">
+            <div>
+                <strong>{{ graficos.status.aprovados + graficos.status.pendentes }}</strong>
+                <span>processos</span>
+            </div>
+        </div>
+        <div class="legend">
+            <span><i class="dot ok"></i>Aprovados <b>{{ graficos.status.aprovados }}</b></span>
+            <span><i class="dot warn"></i>Pendencias <b>{{ graficos.status.pendentes }}</b></span>
+            <span><i class="dot red"></i>Erros <b>{{ kpis.erros }}</b></span>
+        </div>
+    </div>
+
+    <div class="panel chart-card supplier-card">
+        <div class="section-title">
+            <h2>Top 10 Fornecedores</h2>
+            <span>Valores aprovados</span>
+        </div>
+        <div class="bars">
+            {% for item in graficos.fornecedores %}
+            <div class="bar-row">
+                <div><strong>{{ item.nome }}</strong><span>{{ item.valor }}</span></div>
+                <b><i style="width: {{ item.pct }}%"></i></b>
+            </div>
+            {% else %}
+            <p class="empty slim">Sem valores aprovados para exibir.</p>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="panel chart-card status-panel">
+        <div class="section-title">
+            <h2>Status dos Processos</h2>
+            <span>{{ relatorio_txt|data_path }}</span>
+        </div>
+        <div class="status-illustration {{ 'danger' if kpis.erros else 'warning' if kpis.pendencias else 'ok' }}">
+            {% if kpis.erros %}
+            <div class="clipboard">ER</div>
+            <strong>Existem erros para revisar</strong>
+            <p>{{ kpis.erros }} ocorrencia(s) exigem conferencia antes da assinatura.</p>
+            <a class="btn quiet" href="{{ url_for('pendencias') }}">Ver pendencias</a>
+            {% elif kpis.pendencias %}
+            <div class="clipboard">PN</div>
+            <strong>Há pendencias no dia</strong>
+            <p>{{ kpis.pendencias }} processo(s) aguardam correcao ou validacao manual.</p>
+            <a class="btn quiet" href="{{ url_for('pendencias') }}">Ver pendencias</a>
+            {% else %}
+            <div class="clipboard">OK</div>
+            <strong>Tudo certo!</strong>
+            <p>Nenhuma pendencia encontrada. Todos os processos aprovados.</p>
+            <a class="btn quiet" href="{{ url_for('processos') }}">Ver processos aprovados</a>
+            {% endif %}
+        </div>
+    </div>
+</section>
+
+<section class="dashboard-insights">
+    <article class="panel">
+        <div class="section-title"><h2>Pendencias por Tipo</h2><span>Hoje</span></div>
+        <div class="metric-list">
+            {% for item in graficos.pendencias %}
+            <div><span>{{ item.nome }}</span><strong>{{ item.total }}</strong></div>
+            {% else %}<p class="empty slim">Nenhuma pendencia categorizada.</p>{% endfor %}
+        </div>
+    </article>
+    <article class="panel">
+        <div class="section-title"><h2>Documentos por Tipo</h2><span>Hoje</span></div>
+        <div class="metric-list">
+            {% for item in graficos.documentos %}
+            <div><span>{{ item.nome }}</span><strong>{{ item.total }}</strong></div>
+            {% else %}<p class="empty slim">Nenhum documento processado.</p>{% endfor %}
+        </div>
+    </article>
+    <article class="panel execution-panel">
+        <div class="section-title"><h2>Ultimo Processamento</h2><span>{{ ultima_execucao.fim or '-' }}</span></div>
+        <div class="execution-grid">
+            <span>Arquivos<strong>{{ ultima_execucao.arquivos_processados or 0 }}</strong></span>
+            <span>Aprovados<strong>{{ ultima_execucao.processos_aprovados or 0 }}</strong></span>
+            <span>Pendentes<strong>{{ ultima_execucao.processos_pendentes or 0 }}</strong></span>
+            <span>Erros<strong>{{ ultima_execucao.erros_encontrados or 0 }}</strong></span>
+            <span>Tempo<strong>{{ ultima_execucao.duracao_formatada or '00:00' }}</strong></span>
+        </div>
+    </article>
+</section>
+
+<section class="panel">
+    <div class="section-title table-title">
+        <div class="table-tabs">
+            <h2>Conferencia Recente</h2>
+            <span>Todos <b>{{ kpis.processos_dia }}</b></span>
+            <span>Aprovados <b>{{ kpis.aprovados }}</b></span>
+            <span>Pendencias <b>{{ kpis.pendencias }}</b></span>
+            <span>Erros <b>{{ kpis.erros }}</b></span>
+        </div>
+        <div class="table-tools">
+            <input type="search" placeholder="Buscar por fornecedor, NF, pedido...">
+            <button class="btn quiet compact">Filtros</button>
+        </div>
+    </div>
+    {% include "_processos_table.html" %}
+</section>
+
+<section class="bottom-metrics">
+    <article><span>Este mes</span><strong>{{ kpis.valor_total }}</strong><small>Valor total aprovado</small></article>
+    <article><span>Media de Confiabilidade</span><strong>{{ kpis.confianca_media }}%</strong><small>Dos processos analisados</small></article>
+    <article><span>Tempo do Ultimo Processamento</span><strong>{{ ultima_execucao.duracao_formatada or '00:00' }}</strong><small>{{ ultima_execucao.arquivos_processados or 0 }} arquivos</small></article>
+    <article><span>OCR para Revisar</span><strong>{{ kpis.ocr }}</strong><small>Documentos abaixo de 90%</small></article>
+</section>
+{% endblock %}

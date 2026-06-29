@@ -1,0 +1,143 @@
+{% extends "base.html" %}
+{% block body_class %}process-detail-page{% endblock %}
+{% block content %}
+<section class="process-detail">
+    <div class="process-hero process-hero-v3">
+        <span class="status-pill {{ processo.status|lower|replace(' ', '-') }}">{{ processo.status }}</span>
+        <h2>{{ processo.fornecedor }}</h2>
+        <p>NF {{ processo.nf }} <span>Pedido {{ processo.pedido }}</span> <span>Valor {{ processo.valor }}</span></p>
+        {% if processo.status == 'FINALIZADO' %}
+        <button class="btn success" type="button" disabled>Processo finalizado</button>
+        {% elif processo.status == 'APROVADO' %}
+        <a class="btn primary" href="{{ url_for('assinaturas') }}">Enviar ZapSign</a>
+        {% else %}
+        <button class="btn primary" type="button" data-approve-process="{{ processo.id }}">Aprovar e finalizar</button>
+        {% endif %}
+    </div>
+
+    <section class="process-facts">
+        <article>
+            <span>Processo</span>
+            <strong>{{ processo.id|replace('PROCESSO_', '') }}</strong>
+        </article>
+        <article>
+            <span>Fornecedor</span>
+            <strong>{{ processo.fornecedor }}</strong>
+        </article>
+        <article>
+            <span>CNPJ</span>
+            <strong>{{ processo.cnpj or '-' }}</strong>
+        </article>
+        <article>
+            <span>NF</span>
+            <strong>{{ processo.nf }}</strong>
+        </article>
+        <article>
+            <span>Pedido</span>
+            <strong>{{ processo.pedido }}</strong>
+        </article>
+        <article>
+            <span>Valor NF</span>
+            <strong class="money-ok">{{ processo.valor_nf }}</strong>
+        </article>
+        <article>
+            <span>Valor Boleto</span>
+            <strong>{{ processo.valor_boleto }}</strong>
+        </article>
+        <article>
+            <span>Diferença</span>
+            <strong class="{{ 'money-ok' if processo.diferenca in ['R$ 0,00', 'R$ -0,00', '-'] else 'money-danger' }}">{{ processo.diferenca }}</strong>
+        </article>
+    </section>
+
+    <section class="process-workspace">
+        <aside class="process-aside">
+            <div class="panel info-panel">
+                <div class="section-title"><h2>Informações do Processo</h2></div>
+                <dl class="summary-list">
+                    <dt>Fornecedor</dt><dd>{{ processo.fornecedor }}</dd>
+                    <dt>CNPJ</dt><dd>{{ processo.cnpj or '-' }}</dd>
+                    <dt>Nota Fiscal</dt><dd>{{ processo.nf }}</dd>
+                    <dt>Pedido</dt><dd>{{ processo.pedido }}</dd>
+                    <dt>Valor NF</dt><dd>{{ processo.valor_nf }}</dd>
+                    <dt>Produtos NF</dt><dd>{{ processo.valor_produtos_nf }}</dd>
+                    <dt>Valor Boleto</dt><dd>{{ processo.valor_boleto }}</dd>
+                    <dt>Valor Pedido</dt><dd>{{ processo.valor_pedido }}</dd>
+                    <dt>Diferença</dt><dd class="{{ 'money-ok' if processo.diferenca in ['R$ 0,00', 'R$ -0,00', '-'] else 'money-danger' }}">{{ processo.diferenca }}</dd>
+                </dl>
+            </div>
+
+            <div class="panel validation-panel">
+                <div class="section-title"><h2>Validações</h2></div>
+                <div class="confidence-score"><span>Confiabilidade Geral</span><strong>{{ processo.confianca_geral }}%</strong></div>
+                <div class="check-list">
+                    <div><strong>CNPJ</strong><span class="{{ 'warn' if 'CNPJ' in (processo.status_raw or '') else 'ok' }}">{{ 'Aguardando' if 'CNPJ' in (processo.status_raw or '') else 'OK' }}</span></div>
+                    <div><strong>Pedido</strong><span class="{{ 'ok' if processo.pedido_validacao == 'OK' else 'warn' }}">{{ processo.pedido_validacao }}</span></div>
+                    <div><strong>Valor NF</strong><span class="{{ 'warn' if 'VALOR' in (processo.status_raw or '') else 'ok' }}">{{ 'Aguardando' if 'VALOR' in (processo.status_raw or '') else 'OK' }}</span></div>
+                    <div><strong>Valor Boleto</strong><span class="{{ 'warn' if 'VALOR' in (processo.status_raw or '') else 'ok' }}">{{ 'Aguardando' if 'VALOR' in (processo.status_raw or '') else 'OK' }}</span></div>
+                    <div><strong>Valor Pedido</strong><span class="ok">OK</span></div>
+                    <div><strong>OCR Qualidade</strong><span class="info">{{ processo.conferencia }}%</span></div>
+                </div>
+            </div>
+
+            <div class="panel docs-panel">
+                <div class="section-title"><h2>Documentos</h2></div>
+                <div class="document-cards document-cards-compact">
+                    {% for doc in processo.legendas %}
+                    <article class="{{ 'ready' if doc.ok else 'missing' }}">
+                        <strong>{{ doc.nome }}</strong>
+                        <span>{{ 'Localizado' if doc.ok else 'Pendente' }}</span>
+                    </article>
+                    {% endfor %}
+                </div>
+                <p class="doc-count">{{ processo.documentos_label }} documentos encontrados</p>
+            </div>
+
+            <div class="panel timeline-panel">
+                <div class="section-title"><h2>Timeline</h2></div>
+                <div class="timeline timeline-compact">
+                    {% for doc in processo.legendas %}
+                    <div class="{{ 'done' if doc.ok else 'todo' }}"><time>{{ loop.index + 8 }}:1{{ loop.index }}</time><strong>{{ doc.nome }} {{ 'localizado' if doc.ok else 'pendente' }}</strong></div>
+                    {% endfor %}
+                    <div class="{{ 'done' if processo.status in ['APROVADO', 'FINALIZADO'] else 'todo' }}"><time>09:14</time><strong>Conferência {{ 'concluída' if processo.status in ['APROVADO', 'FINALIZADO'] else 'pendente' }}</strong></div>
+                    <div class="{{ 'done' if processo.status == 'FINALIZADO' else 'todo' }}"><time>09:15</time><strong>PDF {{ 'unificado' if processo.status == 'FINALIZADO' else 'aguardando unificação' }}</strong></div>
+                </div>
+            </div>
+        </aside>
+
+        <section class="panel pdf-panel pdf-panel-v3">
+            <div class="pdf-toolbar">
+                <div class="tabs">
+                    {% for tab in pdf_tabs %}
+                    <button class="{{ 'active' if loop.first else '' }}" type="button" data-pdf-group="{{ loop.index0 }}" data-pdf="{{ tab.url or '' }}" {{ 'disabled' if not tab.url else '' }}>{{ tab.label }}{% if tab.anexos|length > 1 %} ({{ tab.anexos|length }}){% endif %}</button>
+                    {% endfor %}
+                </div>
+                <span>Arquivo</span>
+            </div>
+            <div class="pdf-attachments">
+                {% for tab in pdf_tabs %}
+                <div class="pdf-attachment-group" data-pdf-files="{{ loop.index0 }}" {{ 'hidden' if not loop.first else '' }}>
+                    {% for anexo in tab.anexos %}
+                    <button class="{{ 'active' if loop.first else '' }}" type="button" data-pdf="{{ anexo.url }}">{{ anexo.nome }}</button>
+                    {% endfor %}
+                </div>
+                {% endfor %}
+            </div>
+            {% if pdf_preview %}
+            <iframe id="pdfFrame" src="{{ pdf_preview }}"></iframe>
+            {% else %}
+            <div class="pdf-empty">PDF não localizado para este processo na pasta do dia.</div>
+            {% endif %}
+        </section>
+    </section>
+
+    {% if processo.erros %}
+    <section class="panel process-alerts">
+        <div class="section-title"><h2>Pendências do Processo</h2><span>{{ processo.erros|length }} itens</span></div>
+        {% for erro in processo.erros %}
+        <div class="validation danger"><strong>Pendência</strong><p>{{ erro }}</p></div>
+        {% endfor %}
+    </section>
+    {% endif %}
+</section>
+{% endblock %}

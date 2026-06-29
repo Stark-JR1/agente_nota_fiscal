@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="panel">
+    <div class="section-title">
+        <h2>Fornecedores</h2>
+        <span>{{ fornecedores|length }} fornecedores no relatorio</span>
+    </div>
+    <div class="table-wrap">
+        <table>
+            <thead><tr><th>Fornecedor</th><th>Processos</th><th>Aprovados</th><th>Valor Processado</th></tr></thead>
+            <tbody>
+                {% for fornecedor in fornecedores %}
+                <tr>
+                    <td class="supplier">{{ fornecedor.nome }}</td>
+                    <td>{{ fornecedor.processos }}</td>
+                    <td>{{ fornecedor.aprovados }}</td>
+                    <td>{{ fornecedor.valor_fmt }}</td>
+                </tr>
+                {% else %}
+                <tr><td colspan="4" class="empty">Nenhum fornecedor encontrado.</td></tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</section>
+{% endblock %}

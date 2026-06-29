@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Robo PDF Financeiro</title>
+    <link rel="stylesheet" href="{{ asset_url('css/app.css') }}">
+</head>
+<body class="{% block body_class %}{% endblock %}">
+    <aside class="sidebar">
+        <div class="brand">
+            <span class="brand-mark">PDF</span>
+            <div>
+                <strong>ROBO PDF</strong>
+                <small>Financeiro</small>
+            </div>
+        </div>
+        <nav>
+            <a class="{{ 'active' if active == 'dashboard' else '' }}" href="{{ url_for('dashboard') }}"><span>DP</span>Dashboard</a>
+            <a class="{{ 'active' if active == 'processos' else '' }}" href="{{ url_for('processos') }}"><span>PR</span>Processos</a>
+            <a class="{{ 'active' if active == 'pendencias' else '' }}" href="{{ url_for('pendencias') }}"><span>PN</span>Pendencias <b>{{ kpis.pendencias if kpis is defined else 0 }}</b></a>
+            <a class="{{ 'active' if active == 'logs_tecnicos' else '' }}" href="{{ url_for('logs') }}"><span>LG</span>Logs</a>
+            <a class="{{ 'active' if active == 'relatorios' else '' }}" href="{{ url_for('relatorios') }}"><span>RL</span>Relatorios</a>
+            <a class="{{ 'active' if active == 'configuracoes' else '' }}" href="{{ url_for('configuracoes') }}"><span>CF</span>Configuracoes</a>
+            <a class="{{ 'active' if active == 'fornecedores' else '' }}" href="{{ url_for('fornecedores') }}"><span>FN</span>Fornecedores</a>
+            <a class="{{ 'active' if active == 'assinaturas' else '' }}" href="{{ url_for('assinaturas') }}"><span>AS</span>Assinaturas</a>
+        </nav>
+        <div class="sidebar-user">
+            <span>PJ</span>
+            <div><strong>Paulo Junior</strong><small>Administrador</small></div>
+        </div>
+    </aside>
+
+    <main class="shell">
+        <header class="topbar">
+            <button class="menu-btn" type="button">=</button>
+            <div class="top-title">
+                <h1>ROBO PDF FINANCEIRO</h1>
+                <p>Conferencia automatica de notas fiscais, boletos, pedidos e contratos</p>
+            </div>
+            <div class="actions">
+                <span class="health">Sistema Operacional</span>
+                <span class="date-chip">{{ pastas.data.strftime('%d/%m/%Y') if pastas is defined else '' }}</span>
+                <button class="btn primary" data-run="0">Rodar Conferencia</button>
+                <button class="btn quiet" data-run="1">Dry Run</button>
+                <a class="btn quiet" href="{{ request.path }}">Atualizar</a>
+            </div>
+        </header>
+
+        <section class="run-panel" id="runPanel" hidden>
+            <div class="run-head">
+                <strong id="runTitle">Executando...</strong>
+                <span id="runState">aguardando retorno</span>
+            </div>
+            <pre id="runOutput"></pre>
+        </section>
+
+        {% block content %}{% endblock %}
+    </main>
+    <script src="{{ asset_url('js/app.js') }}"></script>
+</body>
+</html>
