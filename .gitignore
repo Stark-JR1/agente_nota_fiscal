@@ -76,9 +76,11 @@ backup_refatoracao_v1/
 HISTORICO_LEGADO/_DATABASE/BACKUP/
 
 # Arquivos Office temporarios
+~$*.xls
 ~$*.xlsx
 ~$*.xlsm
 ~$*.docx
+~$*.pptx
 
 # Artefatos locais historicos
 static.zip

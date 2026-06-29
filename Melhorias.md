@@ -302,6 +302,66 @@ Dados:
 
 ---
 
+## M013 - Remover wrappers mortos com testes
+
+Objetivo futuro:
+
+Identificar wrappers Python sem uso real e remover somente com cobertura de testes.
+
+Nao executar agora.
+
+---
+
+## M014 - Separar web_legacy.py
+
+Objetivo futuro:
+
+Dividir a interface Flask legada em rotas, helpers e servicos menores, preservando comportamento.
+
+Nao executar agora.
+
+---
+
+## M015 - Dividir extrator_campos.py
+
+Objetivo futuro:
+
+Separar extracao por tipo documental e reduzir a funcao principal de extracao.
+
+Nao executar agora.
+
+---
+
+## M016 - Dividir validador.py
+
+Objetivo futuro:
+
+Separar validacoes de CNPJ, valores, pedidos e excecoes em modulos menores.
+
+Nao executar agora.
+
+---
+
+## M017 - Dividir agrupador.py
+
+Objetivo futuro:
+
+Separar regras de agrupamento, similaridade, multiplos pedidos e boletos parcelados.
+
+Nao executar agora.
+
+---
+
+## M018 - Otimizar dashboard
+
+Objetivo futuro:
+
+Reduzir releituras e melhorar o desempenho da interface sem alterar regras fiscais.
+
+Nao executar agora.
+
+---
+
 # Regras para executar melhorias
 
 Sempre:
